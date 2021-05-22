@@ -10,6 +10,7 @@ from json import  loads
 intents = discord.Intents.default()
 intents.members = True
 intents.messages = True
+ 
 
 client = commands.Bot(command_prefix='+', intents=intents)  
 
@@ -134,4 +135,7 @@ async def helpme(ctx):
 +'give it a try, let’s chat  :blue_heart: \n'
 )
 
-client.run('ODQ0OTgxMTQxODE5NzUyNTE4.YKaUAw.UvwWRnTAKeaH2foYyA3yQMK7iq8') #brainy's wife 
+configJson = loads(open("config.json","r").read())
+
+DTOKEN = configJson["TOKEN"]
+client.run(DTOKEN) #brainy's wife
