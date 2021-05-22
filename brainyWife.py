@@ -71,7 +71,7 @@ async def thank(ctx):
 
 @client.command()
 async def wtm(ctx):
-    await ctx.send('International Women’s Day')
+    await ctx.send('Women Techmakers Algiers')
     global save
     if(save=="where") :
          await ctx.send('The event will be fully Virtual ')
@@ -93,7 +93,7 @@ async def wtm_events(ctx):
          await ctx.send('The event will be fully Virtual ')
     if(save=="when") :
          await ctx.send("The will will start the 20th May")
-    save = "wtm_event"
+    save = "iwd_event"
 
 @client.command()
 async def more(ctx): 
@@ -103,6 +103,9 @@ async def more(ctx):
         save =""
     elif (save=="gdg") :
         await ctx.send("GDG Algiers official website : https://www.gdgalgiers.com/")
+        save =""
+    elif (save=="iwd_event") :
+        await ctx.send('IWD (International Women’s Day) marked on 8th march every year. An international day celebrating women’s economic, political and social achievements. This year\'s edition intends to train and help the developers community evolve, develop their passion and grow their networks.')
         save =""
     else :
         await  ctx.send("There is nothing searched so that i give you more informations :) ")
