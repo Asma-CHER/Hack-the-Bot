@@ -4,22 +4,12 @@ import json
 import os 
 from discord import channel
 from discord.ext import commands 
-#from json import  loads
+from json import  loads
 #from dotenv import load_dotenv
 
 intents = discord.Intents.default()
 intents.members = True
 intents.messages = True
-
-if os.path.exists(os.getcwd()+"/config.json"):
-    with open("./config.json") as f:
-        configData = json.load(f)
-else:
-    configTemplate ={"Token":""}
-    
-    with open(os.getcwd()+"/config.json", "w+") as f:
-        json.dump(configTemplate, f)
-token = configData["Token"]
 
 client = commands.Bot(command_prefix='+', intents=intents)  
 
@@ -144,20 +134,4 @@ async def helpme(ctx):
 +'give it a try, let’s chat  :blue_heart: \n'
 )
 
-'''
-TOKEN = os.getenv("TOKEN")
-if "TOKEN" in os.environ :
-    TOKEN = os.getenv("TOKEN")
-    
-else: 
-    configJson = loads(open("config.json","r").read())
-    TOKEN = configJson["TOKEN"] 
-
-if TOKEN == None:
-    raise "Server token not found"
-raki hna?
-'''
-#npm install dotenv
-
-
-client.run(token) #brainy's wife 
+client.run('ODQ0OTgxMTQxODE5NzUyNTE4.YKaUAw.UvwWRnTAKeaH2foYyA3yQMK7iq8') #brainy's wife 
